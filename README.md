@@ -1,4 +1,5 @@
 # Sistema de Gestión de Tutorías
+https://github.com/juan-lung-at-uees/sistema-tutorias
 
 ## Propósito del Proyecto
 Este proyecto implementa el modelo inicial de un Sistema de gestión de tutorías aplicando principios de diseño orientado a objetos (OO), patrones arquitectónicos básicos (SOLID), cohesión/acoplamiento y herramientas modernas (Java 21, Maven, Git, JUnit).
@@ -24,12 +25,14 @@ otification.
 - **Principio de Responsabilidad Simple (Single Responsibility Principle, SRP):** Cada clase tiene un único motivo para cambiar. La entidad de reserva maneja estados, el servicio coordina flujos, y el notificador comunica eventos de infraestructura.
 
 ## Diagrama UML
-El diagrama UML descriptivo en formato PlantUML se encuentra en la carpeta doc/modelo-clases.puml.
+El diagrama UML descriptivo en formato PlantUML se encuentra en [doc/modelo-clases.puml](doc/modelo-clases.puml).
+
+<img src="doc/modelo-clases.svg">
 
 ## Requisitos para Ejecutar
-- Java 21 o superior
-- Maven 3.6+
-- Git
+- [Java 21 o superior](https://jdk.java.net/archive/)
+- [Maven 3.6+](https://maven.apache.org/download.cgi)
+- [Git](https://git-scm.com/install)
 
 ## Comandos de Compilación y Pruebas
 Para limpiar y compilar el proyecto garantizando el estado del código base:
