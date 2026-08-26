@@ -1,4 +1,4 @@
-﻿package edu.uees.tutorias.domain;
+package edu.uees.tutorias.domain;
 
 public class Estudiante {
     private String id;
@@ -10,7 +10,6 @@ public class Estudiante {
         this.nombre = nombre;
         this.correo = correo;
     }
-    
     public String getCorreo() { return correo; }
     public String getNombre() { return nombre; }
 }

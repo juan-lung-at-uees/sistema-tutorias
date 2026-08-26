@@ -1,4 +1,4 @@
-﻿package edu.uees.tutorias.domain;
+package edu.uees.tutorias.domain;
 import java.time.LocalDateTime;
 
 public class Reserva {
@@ -15,7 +15,6 @@ public class Reserva {
         this.estado = EstadoReserva.PENDIENTE;
         this.fechaCreacion = LocalDateTime.now();
     }
-
     public void confirmar() {
         if (this.estado != EstadoReserva.PENDIENTE) {
             throw new IllegalStateException("Solo se pueden confirmar reservas pendientes.");
@@ -23,12 +22,10 @@ public class Reserva {
         this.horario.ocupar();
         this.estado = EstadoReserva.CONFIRMADA;
     }
-
     public void cancelar() {
         this.horario.liberar();
         this.estado = EstadoReserva.CANCELADA;
     }
-    
     public Estudiante getEstudiante() { return estudiante; }
     public EstadoReserva getEstado() { return estado; }
 }

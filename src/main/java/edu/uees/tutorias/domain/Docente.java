@@ -1,4 +1,4 @@
-﻿package edu.uees.tutorias.domain;
+package edu.uees.tutorias.domain;
 
 public class Docente {
     private String id;

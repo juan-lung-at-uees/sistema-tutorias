@@ -3,3 +3,6 @@ C:\Users\Juan Lung\development\uees\sistema-tutorias\src\main\java\edu\uees\tuto
 C:\Users\Juan Lung\development\uees\sistema-tutorias\src\main\java\edu\uees\tutorias\domain\Estudiante.java
 C:\Users\Juan Lung\development\uees\sistema-tutorias\src\main\java\edu\uees\tutorias\domain\HorarioTutoria.java
 C:\Users\Juan Lung\development\uees\sistema-tutorias\src\main\java\edu\uees\tutorias\domain\Reserva.java
+C:\Users\Juan Lung\development\uees\sistema-tutorias\src\main\java\edu\uees\tutorias\notification\EmailNotificador.java
+C:\Users\Juan Lung\development\uees\sistema-tutorias\src\main\java\edu\uees\tutorias\notification\INotificador.java
+C:\Users\Juan Lung\development\uees\sistema-tutorias\src\main\java\edu\uees\tutorias\service\ServicioReservas.java

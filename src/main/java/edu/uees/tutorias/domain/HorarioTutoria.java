@@ -1,4 +1,4 @@
-﻿package edu.uees.tutorias.domain;
+package edu.uees.tutorias.domain;
 import java.time.LocalDateTime;
 
 public class HorarioTutoria {
@@ -15,14 +15,11 @@ public class HorarioTutoria {
         this.fechaFin = fechaFin;
         this.disponible = true;
     }
-
     public boolean isDisponible() { return disponible; }
-
     public void ocupar() {
         if (!disponible) throw new IllegalStateException("El horario ya está ocupado.");
         this.disponible = false;
     }
-
     public void liberar() {
         this.disponible = true;
     }
