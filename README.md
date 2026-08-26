@@ -14,13 +14,14 @@ El sistema requiere gestionar encuentros académicos (tutorías) asegurando que 
 - **INotificador:** Abstracción para aislar el envío de avisos.
 
 ## Decisiones de Diseño Relevantes
-- Se evitó el antipatrón del modelo de clases anémicas: las reglas de negocio viven estrictamente dentro de las entidades (por ejemplo, eserva.confirmar()).
+- Se evitó el antipatrón del modelo de clases anémicas: las reglas de negocio viven estrictamente dentro de las entidades (por ejemplo, 
+eserva.confirmar()).
 - Se utilizó una estructura de paquetes limpia separando domain, service y 
 otification.
 
 ## Principios SOLID Aplicados
-- **Dependency Inversion Principle (DIP):** ServicioReservas depende de la abstracción INotificador, y no de implementaciones de correo concretas.
-- **Single Responsibility Principle (SRP):** Cada clase tiene un único motivo para cambiar. La entidad de reserva maneja estados, el servicio coordina flujos, y el notificador comunica eventos de infraestructura.
+- **Principio de Inversión de Dependencia (Dependency Inversion Principle, DIP):** ServicioReservas depende de la abstracción INotificador, y no de implementaciones de correo concretas.
+- **Principio de Responsabilidad Simple (Single Responsibility Principle, SRP):** Cada clase tiene un único motivo para cambiar. La entidad de reserva maneja estados, el servicio coordina flujos, y el notificador comunica eventos de infraestructura.
 
 ## Diagrama UML
 El diagrama UML descriptivo en formato PlantUML se encuentra en la carpeta doc/modelo-clases.puml.
@@ -32,9 +33,13 @@ El diagrama UML descriptivo en formato PlantUML se encuentra en la carpeta doc/m
 
 ## Comandos de Compilación y Pruebas
 Para limpiar y compilar el proyecto garantizando el estado del código base:
-`ash
+```bash
 mvn clean compile
+```
 Para ejecutar la suite de pruebas unitarias (JUnit 5):
+```bash
 mvn clean test
-Declaración de Uso de IA
+```
+
+## Declaración de Uso de IA
 Se declara el uso de asistentes de IA (Gemini) como herramienta de apoyo para el análisis arquitectónico, estructuración del proyecto Maven, generación de scripts para automatización y validación de sintaxis técnica, manteniendo la autoría, revisión y comprensión total sobre las decisiones de diseño implementadas en el código por parte del estudiante.
