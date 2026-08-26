@@ -1,0 +1,59 @@
+@startuml
+package edu.uees.tutorias.domain {
+  enum EstadoReserva {
+    PENDIENTE
+    CONFIRMADA
+    CANCELADA
+    REALIZADA
+  }
+  class Estudiante {
+    - id: String
+    - nombre: String
+    - correo: String
+    + getNombre(): String
+    + getCorreo(): String
+  }
+  class Docente {
+    - id: String
+    - nombre: String
+    - especialidad: String
+  }
+  class HorarioTutoria {
+    - id: String
+    - disponible: boolean
+    + isDisponible(): boolean
+    + ocupar(): void
+    + liberar(): void
+  }
+  class Reserva {
+    - id: String
+    - fechaCreacion: LocalDateTime
+    + confirmar(): void
+    + cancelar(): void
+    + getEstudiante(): Estudiante
+    + getEstado(): EstadoReserva
+  }
+  Estudiante "1" <-- "*" Reserva : estudiante
+  HorarioTutoria "1" <-- "*" Reserva : horario
+  EstadoReserva "1" <-- "*" Reserva : estado
+  Docente "1" <-- "*" HorarioTutoria : docente
+}
+
+package edu.uees.tutorias.notification {
+  interface INotificador {
+    + enviarNotificacion(destinatario: Estudiante, asunto: String, mensaje: String): void
+  }
+  class EmailNotificador {
+    + enviarNotificacion(destinatario: Estudiante, asunto: String, mensaje: String): void
+  }
+  INotificador <|.. EmailNotificador
+}
+
+package edu.uees.tutorias.service {
+  class ServicioReservas {
+    + confirmarReserva(reserva: Reserva): void
+  }
+  ServicioReservas --> INotificador : notificador
+  ServicioReservas ..> Reserva : confirma
+}
+@enduml
